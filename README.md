@@ -32,9 +32,11 @@ The code should eventually become available as a public R package,
 which can be downloaded from [CRAN](https://cran.r-project.org/).
 Or perhaps it might be integrated into existing packages which
 already perform some kind of matrix randomization.
-But that requires some more work with packaging and portability testing,
-so at the moment this is source code only for those who want to read it,
-or for those brave enough to try installing it from this current form.
+But that requires some more work with portability testing.
+
+So at the moment users are invited to install the package
+from this source repository, e.g. by invoking `R CMD INSTALL .`
+from the top directory of the working copy.
 
 ## Usage
 
