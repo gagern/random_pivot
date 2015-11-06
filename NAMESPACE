@@ -1,0 +1,2 @@
+useDynLib(random.pivot, random_pivot_augment)
+export(random.pivot)

@@ -1,3 +1,6 @@
-random_pivot.dll
-random_pivot.so
-random_pivot.o
+/src/random.pivot.dll
+/src/random.pivot.so
+/src/random_pivot.o
+/src/symbols.rds
+/*.Rcheck/
+/random.pivot_*.tar.gz

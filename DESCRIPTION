@@ -1,0 +1,11 @@
+Package: random.pivot
+Version: 0.1.0
+License: GPL (>= 3)
+Title: Randomized Binary Matrices Satisfying Given Marginal Sums
+Description: Computes randomized binary (i.e. logical) matrices
+  with a given number of cells selected in each row and column.
+Maintainer: Martin von Gagern <Martin.vGagern@gmx.net>
+Author: Martin von Gagern
+URL: https://github.com/gagern/random_pivot
+BugReports: https://github.com/gagern/random_pivot/issues
+NeedsCompilation: yes

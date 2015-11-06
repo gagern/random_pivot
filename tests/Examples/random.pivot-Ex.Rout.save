@@ -1,0 +1,68 @@
+
+R version 3.2.2 (2015-08-14) -- "Fire Safety"
+Copyright (C) 2015 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> pkgname <- "random.pivot"
+> source(file.path(R.home("share"), "R", "examples-header.R"))
+> options(warn = 1)
+> library('random.pivot')
+> 
+> base::assign(".oldSearch", base::search(), pos = 'CheckExEnv')
+> cleanEx()
+> nameEx("random_pivot")
+> ### * random_pivot
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: random.pivot
+> ### Title: Randomized Binary Matrices Satisfying Given Marginal Sums
+> ### Aliases: random.pivot
+> 
+> ### ** Examples
+> 
+> ## We want reproducible examples
+> set.seed(1248163264)
+> 
+> ## Generate a random 3x3 matrix with sums 1,2,1 for rows and columns
+> random.pivot(c("r1", "r2", "r2", "r3"), c("c1", "c2", "c2", "c3"))
+      c1    c2    c3
+r1 FALSE FALSE  TRUE
+r2  TRUE  TRUE FALSE
+r3 FALSE  TRUE FALSE
+> 
+> ## Generate another matrix following the same rules, but print it more compact
+> random.pivot(c("r1", "r2", "r2", "r3"), c("c1", "c2", "c2", "c3"))*1
+   c1 c2 c3
+r1  0  1  0
+r2  1  1  0
+r3  0  0  1
+> 
+> 
+> 
+> ### * <FOOTER>
+> ###
+> options(digits = 7L)
+> base::cat("Time elapsed: ", proc.time() - base::get("ptime", pos = 'CheckExEnv'),"\n")
+Time elapsed:  0.087 0 0.087 0 0 
+> grDevices::dev.off()
+null device 
+          1 
+> ###
+> ### Local variables: ***
+> ### mode: outline-minor ***
+> ### outline-regexp: "\\(> \\)?### [*]+" ***
+> ### End: ***
+> quit('no')

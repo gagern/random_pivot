@@ -227,7 +227,7 @@ namespace random_pivot {
 
 extern "C" {
 
-  void rp_augment
+  void random_pivot_augment
   (int* pNumRows, int* pNumCols,
    int* rowSums, int* colSums,
    int* matrix)

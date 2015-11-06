@@ -14,8 +14,6 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-dyn.load("C:\\Rtools\\MySources\\random_pivot.dll")
-
 random.pivot <- function(rows, cols, do.assertions=TRUE) {
   rf <- as.factor(rows)
   cf <- as.factor(cols)
@@ -32,7 +30,7 @@ random.pivot <- function(rows, cols, do.assertions=TRUE) {
   m <- matrix(FALSE, length(rl), length(cl))
   m[matrix(c(sample(rf), sample(cf)), n, 2)] <- TRUE
 
-  res <- .C("rp_augment",
+  res <- .C(random_pivot_augment,
             as.integer(nrow(m)), as.integer(ncol(m)),
             as.integer(row.counts), as.integer(col.counts),
             m=as.logical(m))$m
@@ -45,5 +43,3 @@ random.pivot <- function(rows, cols, do.assertions=TRUE) {
   }
   return(res)
 }
-
-random.pivot(c("r1", "r2", "r2", "r3"), c("c1", "c2", "c2", "c3"))*1
